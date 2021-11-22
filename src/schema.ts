@@ -34,9 +34,9 @@ function _validate<T, U extends T>(schema: SchemaData<T>, data: U): boolean {
 
 /**
  * Validate data with schema
- * @param {Schema<T>} schema
- * @param {T} data
- * @return {boolean}
+ * @param {Schema<T>} schema Validation schema
+ * @param {T} data Data to validate
+ * @return {boolean} true if valid
  */
 export function validate<T, U extends T>(schema: Schema<T>, data: U): boolean {
   return _validate(schema.data, data);
