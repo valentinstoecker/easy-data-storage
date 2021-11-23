@@ -12,7 +12,7 @@ export const isPositive = {isValid: (v: number) => v >= 0};
  * @return {boolean} bool
  */
 export function minLength(x: number): Validator<{length: number}> {
-  return {isValid: (v) => v.length >= x};
+  return {isValid: v => v.length >= x};
 }
 
 /**
@@ -22,7 +22,7 @@ export function minLength(x: number): Validator<{length: number}> {
  */
 export function all<T>(...vals: Validator<T>[]): Validator<T> {
   return {
-    isValid: (v) => {
+    isValid: v => {
       for (const val of vals) {
         if (!val.isValid(v)) {
           return false;

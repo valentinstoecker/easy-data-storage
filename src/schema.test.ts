@@ -23,7 +23,7 @@ test('test validate', () => {
         min: -1,
         max: 1,
       },
-    }),
+    })
   ).toBe(false);
   expect(
     validate<x, x>(testSchema, {
@@ -33,7 +33,7 @@ test('test validate', () => {
         min: -1,
         max: 1,
       },
-    }),
+    })
   ).toBe(false);
   expect(
     validate<x, x>(testSchema, {
@@ -43,6 +43,6 @@ test('test validate', () => {
         min: 0,
         max: 1,
       },
-    }),
+    })
   ).toBe(true);
 });

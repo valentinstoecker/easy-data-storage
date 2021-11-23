@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "npm",
-			"script": "build",
+			"script": "compile",
 			"group": "build",
 			"problemMatcher": [],
 			"label": "npm: build",
@@ -19,7 +19,7 @@
 		},
 		{
 			"type": "npm",
-			"script": "format",
+			"script": "fix",
 			"problemMatcher": [],
 			"label": "npm: format",
 			"detail": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",

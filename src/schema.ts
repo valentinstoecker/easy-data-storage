@@ -24,11 +24,16 @@ function _validate<T, U extends T>(schema: SchemaData<T>, data: U): boolean {
       if ('isValid' in element) {
         if (!element.isValid(data[key])) return false;
       } else if (typeof element === 'object') {
-        // @ts-ignore
-        if (!_validate(element, data[key])) return false;
+        if (
+          !_validate(
+            element as SchemaData<T[Extract<keyof T, string>]>,
+            data[key]
+          )
+        )
+          return false;
       }
     }
-  }
+  } // Test comment
   return true;
 }
 
