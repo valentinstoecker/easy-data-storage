@@ -51,7 +51,7 @@
 		{
 			"label": "format lint build",
 			"dependsOn": [
-				//"npm: format",
+				"npm: format",
 				"npm: lint",
 				"npm: build",
 				"npm: test"
