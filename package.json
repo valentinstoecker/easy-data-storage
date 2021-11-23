@@ -6,7 +6,6 @@
   "scripts": {
     "test": "jest",
     "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
